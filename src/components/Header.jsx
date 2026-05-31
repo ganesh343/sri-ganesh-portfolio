@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { NavLink, Link, useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const NAV_ITEMS = [
@@ -52,16 +52,26 @@ export default function Header() {
           <span className="wordmark">Sri Ganesh Ganta</span>
         </NavLink>
         <nav className="nav">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.id}
-              href={item.href}
-              className={`nav-item${isActive(item) ? ' is-active' : ''}`}
-              onClick={(e) => handleNav(e, item)}
-            >
-              {item.label}
-            </a>
-          ))}
+          {NAV_ITEMS.map((item) =>
+            item.href.startsWith('/#') ? (
+              <a
+                key={item.id}
+                href={item.href}
+                className="nav-item"
+                onClick={(e) => handleNav(e, item)}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.id}
+                to={item.href}
+                className={`nav-item${isActive(item) ? ' is-active' : ''}`}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
       </div>
     </header>
