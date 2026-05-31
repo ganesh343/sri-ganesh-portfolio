@@ -1,0 +1,35 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--s-12);
+  align-items: start;
+}
+
+.about-photo {
+  width: 240px;
+  aspect-ratio: 1;
+  border: var(--b-hair);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--paper-2);
+}
+.about-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.about-copy {
+  max-width: 60ch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+.about-copy .eyebrow { margin-bottom: var(--s-2); }
+.about-copy p {
+  color: var(--ink-2);
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 880px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-photo { width: 160px; }
+}

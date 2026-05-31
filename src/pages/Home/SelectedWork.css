@@ -1,0 +1,82 @@
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-6);
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  background: var(--paper);
+  border: var(--b-hair);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+.project-card:hover { background: var(--paper-2); }
+
+.project-shot {
+  border-right: var(--b-hair);
+  background: var(--paper-2);
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.project-shot img { width: 100%; height: 100%; object-fit: cover; }
+
+.project-body {
+  padding: var(--s-6) var(--s-8);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+}
+
+.project-summary {
+  font-size: var(--fs-base);
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin: 0;
+  max-width: 60ch;
+}
+
+.project-meta-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s-6);
+  margin-top: auto;
+  padding-top: var(--s-4);
+}
+
+.project-stack { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.project-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.metric-val {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+@media (max-width: 880px) {
+  .project-card { grid-template-columns: 1fr; }
+  .project-shot { border-right: none; border-bottom: var(--b-hair); aspect-ratio: 16/10; }
+  .project-meta-row { flex-direction: column; align-items: flex-start; }
+  .project-metric { align-items: flex-start; text-align: left; }
+}

@@ -1,0 +1,207 @@
+/* Resume page */
+.res-masthead {
+  padding: var(--s-20) 0 var(--s-12);
+  border-bottom: var(--b-hair);
+}
+.res-masthead .eyebrow { margin-bottom: var(--s-5); }
+
+.res-name {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 7vw, 72px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin: 0;
+}
+
+.res-role {
+  font-size: var(--fs-lg);
+  color: var(--ink-2);
+  margin: var(--s-4) 0 0;
+}
+
+.res-summary {
+  max-width: 62ch;
+  margin: var(--s-6) 0 0;
+}
+
+.res-contactbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2) var(--s-8);
+  margin-top: var(--s-8);
+  padding: var(--s-5) 0;
+  border-top: var(--b-hair);
+}
+.res-contactbar a,
+.res-location {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--ink-2);
+  letter-spacing: -0.01em;
+  transition: color var(--dur-fast) var(--ease-out);
+  text-decoration: none;
+}
+.res-contactbar a:hover { color: var(--ink); text-decoration: none; }
+.res-location { color: var(--ink-3); }
+
+/* Experience */
+.resume-page .section { padding: var(--s-16) 0; }
+.resume-page .section-head { margin-bottom: var(--s-8); }
+
+.xp-group { display: flex; flex-direction: column; }
+
+.xp {
+  display: grid;
+  grid-template-columns: 248px 1fr;
+  gap: var(--s-10);
+  padding: var(--s-10) 0;
+  border-top: var(--b-hair);
+}
+.xp:first-child { border-top: none; padding-top: 0; }
+
+.xp-meta { display: flex; flex-direction: column; gap: var(--s-2); }
+.xp-co { display: flex; align-items: center; gap: 10px; }
+
+.xp-logo {
+  width: 34px; height: 34px;
+  border: var(--b-hair);
+  background: var(--paper-2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 12px; font-weight: 500;
+  color: var(--ink-3);
+  border-radius: var(--r-sm);
+  flex-shrink: 0;
+}
+
+.xp-company {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.xp-loc, .xp-range {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+}
+
+.xp-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: var(--s-2);
+}
+
+.xp-role {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0 0 var(--s-5);
+}
+
+.xp-bullets {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  max-width: 72ch;
+}
+.xp-bullets li {
+  position: relative;
+  padding-left: var(--s-6);
+  color: var(--ink-2);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+.xp-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--ink-4);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  top: 4px;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s-8) var(--s-10);
+}
+
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.skill-cat { color: var(--ink-3); }
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Education */
+.edu-group { display: flex; flex-direction: column; }
+
+.edu-row {
+  display: grid;
+  grid-template-columns: 248px 1fr;
+  gap: var(--s-10);
+  padding: var(--s-8) 0;
+  border-top: var(--b-hair);
+}
+.edu-row:first-child { border-top: none; padding-top: 0; }
+
+.edu-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+}
+
+.edu-school {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.edu-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.edu-degree {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.edu-note {
+  font-size: var(--fs-base);
+  color: var(--ink-2);
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .xp, .edu-row { grid-template-columns: 1fr; gap: var(--s-5); }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}

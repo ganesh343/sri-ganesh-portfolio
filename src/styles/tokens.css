@@ -1,0 +1,104 @@
+/* ============================================================
+   Halcyon — Portfolio Design System
+   Tokens for color, type, spacing, radii, shadow, motion.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* --------- Color: neutrals --------- */
+  --paper:        #FBFBF9;
+  --paper-2:      #F4F4F0;
+  --paper-3:      #ECECE6;
+  --ink:          #111212;
+  --ink-2:        #3A3B3A;
+  --ink-3:        #6B6C6A;
+  --ink-4:        #9A9B98;
+  --line:         #E3E3DD;
+  --line-strong:  #C9C9C1;
+
+  /* --------- Color: accent --------- */
+  --accent:       #1E47E5;
+  --accent-hover: #1838C0;
+  --accent-soft:  #E6EBFE;
+  --accent-ink:   #FFFFFF;
+
+  /* --------- Color: semantic --------- */
+  --success:      #2F8A4A;
+  --warning:      #B07A11;
+  --danger:       #C2402C;
+  --info:         var(--accent);
+
+  /* --------- Aliases --------- */
+  --fg1: var(--ink);
+  --fg2: var(--ink-2);
+  --fg3: var(--ink-3);
+  --fg4: var(--ink-4);
+  --bg1: var(--paper);
+  --bg2: var(--paper-2);
+  --bg3: var(--paper-3);
+
+  /* --------- Type --------- */
+  --font-sans:    'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    'Geist Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --font-display: 'Geist', ui-sans-serif, system-ui, sans-serif;
+
+  /* --------- Type scale --------- */
+  --fs-xs:   12px;
+  --fs-sm:   13px;
+  --fs-base: 15px;
+  --fs-md:   17px;
+  --fs-lg:   20px;
+  --fs-xl:   24px;
+  --fs-2xl:  32px;
+  --fs-3xl:  44px;
+  --fs-4xl:  60px;
+  --fs-5xl:  84px;
+
+  /* --------- Spacing --------- */
+  --s-0:  0;
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-8:  32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+  --s-32: 128px;
+
+  /* --------- Radii --------- */
+  --r-none: 0px;
+  --r-xs:   2px;
+  --r-sm:   4px;
+  --r-md:   6px;
+  --r-lg:   10px;
+  --r-pill: 999px;
+
+  /* --------- Borders --------- */
+  --bw:        1px;
+  --b-hair:    1px solid var(--line);
+  --b-strong:  1px solid var(--line-strong);
+  --b-ink:     1px solid var(--ink);
+
+  /* --------- Shadows --------- */
+  --shadow-1:     0 1px 0 rgba(17,18,18,0.04);
+  --shadow-2:     0 1px 2px rgba(17,18,18,0.06), 0 0 0 1px rgba(17,18,18,0.04);
+  --shadow-3:     0 8px 24px -8px rgba(17,18,18,0.12), 0 0 0 1px rgba(17,18,18,0.05);
+  --shadow-focus: 0 0 0 3px rgba(30,71,229,0.22);
+
+  /* --------- Motion --------- */
+  --ease-out:   cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:   120ms;
+  --dur-base:   220ms;
+  --dur-slow:   420ms;
+
+  /* --------- Layout --------- */
+  --container: 1180px;
+  --gutter:    32px;
+}
